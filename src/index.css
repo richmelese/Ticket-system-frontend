@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css or style.css */
+/* html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} */
+@font-face {
+    font-family: 'Sen';
+    src: url('/src/assets/fonts/Sen/Sen-Regular.ttf') format('truetype'),
+         url('/src/assets/fonts/Sen/Sen-Bold.ttf') format('truetype'),
+         url('/src/assets/fonts/Sen/Sen-ExtraBold.ttf') format('truetype');
+    font-weight: 400 800;
+    font-display: swap;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Sen', sans-serif;
+}
