@@ -1,7 +1,7 @@
 
 enum UserState {
-    ACTIVE = 'active',
-    INACTIVE = 'inactive'
+   OPEN = 'Open',
+ CLOSED = 'Closed'
 }
 
 export default UserState;
