@@ -24,7 +24,7 @@ const TicketListPage: React.FC = () => {
     const fetchTickets = async () => {
       setWaiting(true);
       try {
-        const response = await fetch('http://localhost:5000/api/tickets', {
+        const response = await fetch('http://49.13.66.115:5000/api/tickets', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

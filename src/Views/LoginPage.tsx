@@ -14,7 +14,7 @@ const LoginPage = () => {
   };
 
   const { setAlert, setWaiting } = useContext(AlertContext);
-  const { setLoggedUser, setLoggedIn, setCookie, onLogin } = useContext(AuthContext);
+  const { setLoggedUser, setLoggedIn, setCookie } = useContext(AuthContext);
 
   const [fields, setFields] = useState<{ email: string; password: string }>({
     email: "",  
@@ -32,7 +32,7 @@ const LoginPage = () => {
 
     setWaiting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('http://49.13.66.115:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

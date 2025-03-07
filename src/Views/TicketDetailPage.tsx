@@ -33,7 +33,7 @@ const TicketDetailPage: React.FC = () => {
     // API call to fetch ticket details
     const fetchTicketDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/tickets/${id}`, {
+        const response = await fetch(`http://49.13.66.115:5000/api/tickets/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -66,13 +66,13 @@ const TicketDetailPage: React.FC = () => {
 
     // API call to update ticket
     try {
-      const response = await fetch(`http://localhost:5000/api/respond/${id}`, {
+      const response = await fetch(`http://49.13.66.115:5000/api/respond/${id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${cookies.login_token}`,
         },
-        body: JSON.stringify({ responseText, status }), // Include status in the request body
+        body: JSON.stringify({ responseText, status }), 
       });
 
       if (!response.ok) {

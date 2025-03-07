@@ -10,7 +10,7 @@ const UserRegistrationPage: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [role, setRole] = useState<string>('user');
+  const [role] = useState<string>('user');
   const [phoneNumber, setPhoneNumber] = useState<string>(''); 
   const { setAlert } = useContext(AlertContext);
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const UserRegistrationPage: React.FC = () => {
 
     // API call to register user
     try {
-      const response = await fetch('http://localhost:5000/api/signup', {
+      const response = await fetch('http://49.13.66.115:5000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

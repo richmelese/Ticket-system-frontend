@@ -22,7 +22,7 @@ const UserListPage: React.FC = () => {
     const fetchUsers = async () => {
       setWaiting(true);
       try {
-        const response = await fetch('http://localhost:5000/api/users', {
+        const response = await fetch('http://49.13.66.115:5000/api/users', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

@@ -37,6 +37,7 @@ function App() {
 
   useEffect(() => {
     const checkAuth = async (token: string) => {
+      console.log(token)
       setAuthWaiting(true);
       setWaiting(true);
       const response = window.localStorage.getItem("loggedUser");

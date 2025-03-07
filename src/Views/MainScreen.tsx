@@ -27,6 +27,7 @@ export default function MainScreen() {
     } else {
       setLoggedIn(false);
       navigate('/login');
+      console.log(isLoggedIn, setCookie);
     }
   }, [cookies, navigate, setLoggedUser]);
 
@@ -42,7 +43,8 @@ export default function MainScreen() {
     console.log("Logging out...");
     window.localStorage.removeItem("loggedUser");
     removeCookie("login_token");
-    window.location.href = "/login"; // Force redirect to login page
+    window.location.href = "/login"; 
+    // Force redirect to login page
   };
 
   return (

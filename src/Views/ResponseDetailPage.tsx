@@ -30,7 +30,7 @@ const ResponseDetailPage: React.FC = () => {
     // API call to fetch response details
     const fetchResponseDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/responses/${id}`, {
+        const response = await fetch(`http://49.13.66.115:5000/api/responses/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

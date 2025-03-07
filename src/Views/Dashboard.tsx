@@ -17,7 +17,7 @@ export default function Dashboard() {
     const fetchDashboardData = async () => {
       setWaiting(true);
       try {
-        const response = await fetch("http://localhost:5000/api/dashboard", {
+        const response = await fetch("http://49.13.66.115:5000/api/dashboard", {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -65,7 +65,8 @@ export default function Dashboard() {
             data={{
               labels: ["Users", "Tickets", "Closed", "Open"],
               values: [users, tickets, closedTickets, openTickets],
-              colors: ['#1a8cff', '#EC4899', '#10B981', '#EF4444'], // Blue, Pink, Green, Red
+              colors: ['#1a8cff', '#EC4899', '#10B981', '#EF4444'],
+              borderColors: ['#1a8cff', '#EC4899', '#10B981', '#EF4444'], 
             }} 
           />
         </ChartContainer>
@@ -75,6 +76,7 @@ export default function Dashboard() {
               labels: ["Users", "Tickets", "Closed", "Open"],
               values: [users, tickets, closedTickets, openTickets],
               colors: ['#1a8cff', '#EC4899', '#10B981', '#EF4444'], // Blue, Pink, Green, Red
+              borderColors: ['#1a8cff', '#EC4899', '#10B981', '#EF4444'],
             }} 
           />
         </ChartContainer>

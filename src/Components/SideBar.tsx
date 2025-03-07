@@ -1,10 +1,10 @@
 
 import { useState, useEffect } from 'react';
-import { Drawer, Box, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
+import { Drawer, Box, List, ListItem, ListItemIcon, Divider } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PeopleIcon from '@mui/icons-material/People';
 import EventIcon from '@mui/icons-material/Event';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Typography from '@mui/material/Typography';
 import ListAltIcon from '@mui/icons-material/ListAlt';
@@ -18,7 +18,7 @@ const Sidebar = () => {
   const [isLoggedIn, setLoggedIn] = useState<boolean>(false);
   const [userRole, setUserRole] = useState<string | null>(null);
   const [cookies, setCookie, removeCookie] = useCookies(["login_token"]);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const userToken = cookies.login_token; 
@@ -30,7 +30,8 @@ const Sidebar = () => {
       setLoggedIn(false);
     }
   }, [cookies]);
-
+console.log(isLoggedIn);
+console.log(setCookie);
   const handleLogout = () => {
     console.log("Logging out...");
     window.localStorage.removeItem("loggedUser");

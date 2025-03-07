@@ -1,12 +1,12 @@
-import React, { useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import AlertContext from '../Contexts/AlertContext';
-import AuthContext from '../Contexts/AuthContext';
+import React from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import AlertContext from '../Contexts/AlertContext';
+// import AuthContext from '../Contexts/AuthContext';
 
 const AccessDeniedAdmin: React.FC = () => {
-  const { setAlert } = useContext(AlertContext);
-  const { loggedUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+  //const { setAlert } = useContext(AlertContext);
+ // const { loggedUser } = useContext(AuthContext);
+ // const navigate = useNavigate();
 
   
   return (

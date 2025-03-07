@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PhotoLibrary as GalleryIcon } from '@mui/icons-material';
+
 
 interface Props {
   label: string;

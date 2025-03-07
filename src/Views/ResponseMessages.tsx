@@ -23,8 +23,8 @@ const ResponseMessages: React.FC = () => {
 
     // Determine the endpoint based on the user's role
     const endpoint = loggedUser.role === 'admin'
-      ? 'http://localhost:5000/api/responses/all'
-      : 'http://localhost:5000/api/responses';
+      ? 'http://49.13.66.115:5000/api/responses/all'
+      : 'http://49.13.66.115:5000/api/responses';
 
     // API call to fetch response messages
     const fetchResponses = async () => {
